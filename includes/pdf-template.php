@@ -246,23 +246,28 @@
     <div style="clear: both;"></div>
 
     <!-- Bank Details -->
-    <div class="bank-details">
-        <div class="bank-header">MAKE ALL PAYMENTS IN FAVOUR OF: Bluedots Technologies</div>
-        <table width="100%">
-            <tr>
-                <td width="50%" style="text-align: center;">
-                    <strong>Access Bank</strong><br>
-                    Account No:
-                    <?php echo BANK_ACCESS; ?>
-                </td>
-                <td width="50%" style="text-align: center;">
-                    <strong>United Bank For Africa (UBA)</strong><br>
-                    Account No:
-                    <?php echo BANK_UBA; ?>
-                </td>
-            </tr>
-        </table>
-    </div>
+    <?php $bank_accounts = getBankAccountsForDisplay(); ?>
+    <?php if (!empty($bank_accounts)): ?>
+        <div class="bank-details">
+            <div class="bank-header">MAKE ALL PAYMENTS IN FAVOUR OF:
+                <?php echo htmlspecialchars($bank_accounts[0]['account_name'] ?? COMPANY_NAME); ?></div>
+            <table width="100%">
+                <tr>
+                    <?php
+                    $column_width = floor(100 / count($bank_accounts));
+                    foreach ($bank_accounts as $index => $account):
+                        ?>
+                        <td width="<?php echo $column_width; ?>%"
+                            style="text-align: center; <?php echo ($index < count($bank_accounts) - 1) ? 'border-right: 1px solid #0076BE;' : ''; ?> padding: 10px;">
+                            <strong><?php echo htmlspecialchars($account['bank_name']); ?></strong><br>
+                            Account No: <?php echo htmlspecialchars($account['account_number']); ?><br>
+                            <small><?php echo htmlspecialchars($account['account_name']); ?></small>
+                        </td>
+                    <?php endforeach; ?>
+                </tr>
+            </table>
+        </div>
+    <?php endif; ?>
 
     <!-- Footer -->
     <div class="footer">

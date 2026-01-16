@@ -143,7 +143,7 @@ function requirePermission($action, $resource = null, $ownerId = null)
         </div>
         <h1 class="text-2xl font-bold text-gray-900 mb-2">Access Denied</h1>
         <p class="text-gray-600 mb-6">You do not have permission to perform this action.</p>
-        <a href="/bluedotserp/dashboard.php" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 inline-block">
+        <a href="/1100erp/dashboard.php" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 inline-block">
             Go to Dashboard
         </a>
     </div>

@@ -68,7 +68,7 @@ include '../includes/header.php';
     <?php else: ?>
 
         <!-- Receipts Table -->
-        <div class="overflow-x-auto">
+        <div class="table-responsive">
             <table class="w-full">
                 <thead>
                     <tr class="border-b-2 border-gray-300">

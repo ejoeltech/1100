@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const formData = new FormData(this);
 
             // Send AJAX request
-            fetch('/bluedotserp/api/send-email.php', {
+            fetch('/1100erp/api/send-email.php', {
                 method: 'POST',
                 body: formData
             })

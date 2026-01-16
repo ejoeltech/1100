@@ -10,7 +10,7 @@ function requireLogin()
 {
     if (!isLoggedIn()) {
         // Redirect to login page with absolute path
-        header('Location: /bluedotserp/login.php');
+        header('Location: /1100erp/login.php');
         exit;
     }
 }

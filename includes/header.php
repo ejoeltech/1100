@@ -36,6 +36,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Responsive CSS -->
+    <link rel="stylesheet"
+        href="<?php echo isset($base_path) ? $base_path : '/bluedotserp'; ?>/assets/css/responsive.css">
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -49,12 +53,107 @@
 
 <body class="bg-gray-50">
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenuOverlay" class="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobileMenu" class="mobile-menu">
+        <div class="flex items-center justify-between mb-6 pb-4 border-b border-gray-200">
+            <h2 class="text-lg font-bold text-gray-900">Menu</h2>
+            <button onclick="toggleMobileMenu()" class="text-gray-500 hover:text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <?php if (isset($current_user)): ?>
+            <nav class="space-y-1">
+                <a href="/1100erp/dashboard.php"
+                    class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-lg font-semibold">
+                    📊 Dashboard
+                </a>
+
+                <!-- Inventory Section -->
+                <div class="border-t border-gray-200 pt-2 mt-2">
+                    <p class="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">Inventory</p>
+                    <a href="/1100erp/pages/products/manage-products.php"
+                        class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-lg">
+                        📦 Products
+                    </a>
+                    <a href="/1100erp/pages/customers/manage-customers.php"
+                        class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-lg">
+                        👥 Customers
+                    </a>
+                </div>
+
+                <!-- Documents Section -->
+                <div class="border-t border-gray-200 pt-2 mt-2">
+                    <p class="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">Documents</p>
+                    <a href="/1100erp/pages/view-quotes.php"
+                        class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-lg">
+                        📄 Quotes
+                    </a>
+                    <a href="/1100erp/pages/readymade-quotes.php"
+                        class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-lg">
+                        ⚡ Ready-Made Quotes
+                    </a>
+                    <a href="/1100erp/pages/view-invoices.php"
+                        class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-lg">
+                        📋 Invoices
+                    </a>
+                    <a href="/1100erp/pages/view-receipts.php"
+                        class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-lg">
+                        💰 Receipts
+                    </a>
+                </div>
+
+                <?php if (function_exists('isAdmin') && isAdmin()): ?>
+                    <!-- Admin Section -->
+                    <div class="border-t border-gray-200 pt-2 mt-2">
+                        <p class="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">Admin</p>
+                        <a href="/1100erp/pages/users/manage-users.php"
+                            class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-lg">
+                            👤 Manage Users
+                        </a>
+                        <a href="/1100erp/pages/settings.php"
+                            class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-lg">
+                            ⚙️ Settings
+                        </a>
+                        <a href="/1100erp/pages/audit-log.php"
+                            class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-lg">
+                            📊 Audit Log
+                        </a>
+                    </div>
+                <?php endif; ?>
+
+                <!-- User Section -->
+                <div class="border-t border-gray-200 pt-2 mt-2">
+                    <p class="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">Account</p>
+                    <a href="/1100erp/pages/users/profile.php"
+                        class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-lg">
+                        👤 My Profile
+                    </a>
+                    <a href="/1100erp/pages/users/change-password.php"
+                        class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-lg">
+                        🔒 Change Password
+                    </a>
+                    <a href="/1100erp/logout.php"
+                        class="block px-4 py-2 text-red-600 hover:bg-red-50 rounded-lg font-semibold">
+                        🚪 Logout
+                    </a>
+                </div>
+            </nav>
+        <?php endif; ?>
+    </div>
+
     <!-- Header -->
     <header class="bg-white shadow-sm border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo - Clickable -->
-                <a href="/bluedotserp/dashboard.php"
+                <a href="/1100erp/dashboard.php"
                     class="flex items-center gap-3 hover:opacity-80 transition-opacity">
                     <?php
                     // Use uploaded logo if available
@@ -62,7 +161,7 @@
                     $logo_files = glob(__DIR__ . '/../uploads/logo/company_logo_*');
                     if (!empty($logo_files)) {
                         $latest_logo = basename(end($logo_files));
-                        echo '<img src="/bluedotserp/uploads/logo/' . htmlspecialchars($latest_logo) . '" alt="Company Logo" class="h-12 object-contain">';
+                        echo '<img src="/1100erp/uploads/logo/' . htmlspecialchars($latest_logo) . '" alt="Company Logo" class="h-12 object-contain">';
                     } else {
                         // Default logo circles
                         echo '<div class="flex items-center gap-1">';
@@ -82,7 +181,7 @@
                 <!-- Navigation -->
                 <?php if (isset($current_user)): ?>
                     <nav class="hidden md:flex items-center gap-1">
-                        <a href="/bluedotserp/dashboard.php"
+                        <a href="/1100erp/dashboard.php"
                             class="px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg font-semibold transition-colors">Dashboard</a>
 
                         <!-- Inventory Dropdown -->
@@ -97,12 +196,12 @@
                             </button>
                             <div
                                 class="absolute left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-                                <a href="/bluedotserp/pages/products/manage-products.php"
+                                <a href="/1100erp/pages/products/manage-products.php"
                                     class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-t-lg">
                                     <div class="font-semibold">Products</div>
                                     <div class="text-xs text-gray-500">Manage catalog</div>
                                 </a>
-                                <a href="/bluedotserp/pages/customers/manage-customers.php"
+                                <a href="/1100erp/pages/customers/manage-customers.php"
                                     class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary border-t rounded-b-lg">
                                     <div class="font-semibold">Customers</div>
                                     <div class="text-xs text-gray-500">Manage clients</div>
@@ -122,22 +221,22 @@
                             </button>
                             <div
                                 class="absolute left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-                                <a href="/bluedotserp/pages/view-quotes.php"
+                                <a href="/1100erp/pages/view-quotes.php"
                                     class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-t-lg">
                                     <div class="font-semibold">Quotes</div>
                                     <div class="text-xs text-gray-500">View all quotes</div>
                                 </a>
-                                <a href="/bluedotserp/pages/readymade-quotes.php"
+                                <a href="/1100erp/pages/readymade-quotes.php"
                                     class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary border-t">
                                     <div class="font-semibold">Ready-Made Quotes</div>
                                     <div class="text-xs text-gray-500">Quick templates</div>
                                 </a>
-                                <a href="/bluedotserp/pages/view-invoices.php"
+                                <a href="/1100erp/pages/view-invoices.php"
                                     class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary border-t">
                                     <div class="font-semibold">Invoices</div>
                                     <div class="text-xs text-gray-500">View all invoices</div>
                                 </a>
-                                <a href="/bluedotserp/pages/view-receipts.php"
+                                <a href="/1100erp/pages/view-receipts.php"
                                     class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary border-t rounded-b-lg">
                                     <div class="font-semibold">Receipts</div>
                                     <div class="text-xs text-gray-500">Payment receipts</div>
@@ -158,15 +257,20 @@
                                 </button>
                                 <div
                                     class="absolute right-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-                                    <a href="/bluedotserp/pages/users/manage-users.php"
+                                    <a href="/1100erp/pages/users/manage-users.php"
                                         class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-t-lg">
                                         <div class="font-semibold">Manage Users</div>
                                         <div class="text-xs text-gray-500">Users & roles</div>
                                     </a>
-                                    <a href="/bluedotserp/pages/settings.php"
-                                        class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary border-t rounded-b-lg">
+                                    <a href="/1100erp/pages/settings.php"
+                                        class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary border-t">
                                         <div class="font-semibold">Settings</div>
                                         <div class="text-xs text-gray-500">System config</div>
+                                    </a>
+                                    <a href="/1100erp/pages/audit-log.php"
+                                        class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary border-t rounded-b-lg">
+                                        <div class="font-semibold">Audit Log</div>
+                                        <div class="text-xs text-gray-500">Activity history</div>
                                     </a>
                                 </div>
                             </div>
@@ -195,25 +299,32 @@
                                         <?php echo htmlspecialchars($current_user['username']); ?>
                                     </p>
                                 </div>
-                                <a href="/bluedotserp/pages/users/profile.php"
+                                <a href="/1100erp/pages/users/profile.php"
                                     class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
                                     👤 My Profile
                                 </a>
-                                <a href="/bluedotserp/pages/users/change-password.php"
+                                <a href="/1100erp/pages/users/change-password.php"
                                     class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
                                     🔒 Change Password
                                 </a>
                                 <hr class="my-1">
-                                <a href="/bluedotserp/logout.php"
+                                <a href="/1100erp/logout.php"
                                     class="block px-4 py-2 text-red-600 hover:bg-red-50 rounded-b-lg font-semibold">
                                     🚪 Logout
                                 </a>
                             </div>
                         </div>
                     </nav>
+
+                    <!-- Mobile Hamburger Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden hamburger" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 <?php else: ?>
                     <nav class="flex gap-4">
-                        <a href="/bluedotserp/login.php" class="text-gray-600 hover:text-primary font-medium">Login</a>
+                        <a href="/1100erp/login.php" class="text-gray-600 hover:text-primary font-medium">Login</a>
                     </nav>
                 <?php endif; ?>
             </div>

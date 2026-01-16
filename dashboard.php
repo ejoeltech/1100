@@ -374,7 +374,7 @@ include 'includes/header.php';
     <?php if (empty($recent_documents)): ?>
         <p class="text-gray-500 text-center py-8">No recent documents</p>
     <?php else: ?>
-        <div class="overflow-x-auto">
+        <div class="table-responsive">
             <table class="w-full">
                 <thead>
                     <tr class="border-b-2 border-gray-200">

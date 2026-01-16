@@ -66,4 +66,4 @@
 </div>
 
 <!-- Include email modal script -->
-<script src="/bluedotserp/assets/js/email-modal.js"></script>
+<script src="/1100erp/assets/js/email-modal.js"></script>

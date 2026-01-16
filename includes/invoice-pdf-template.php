@@ -310,20 +310,33 @@ $html .= '
 
     <div class="clearfix"></div>
 
-    <!-- Footer -->
+  <!-- Footer -->
     <div class="footer">
-        <div class="thank-you">We appreciate your business! Thank you</div>
-        <div class="payment-header">MAKE ALL PAYMENTS IN FAVOUR OF: Bluedots Technologies</div>
-        <div class="bank-details">
-            <div class="bank-item">
-                <div class="bank-name">Access Bank</div>
-                <div class="bank-account">Account No: ' . BANK_ACCESS . '</div>
-            </div>
-            <div class="bank-item">
-                <div class="bank-name">United Bank For Africa (UBA)</div>
-                <div class="bank-account">Account No: ' . BANK_UBA . '</div>
-            </div>
-        </div>
+        <div class="thank-you">We appreciate your business! Thank you</div>';
+
+$bank_accounts = getBankAccountsForDisplay();
+if (!empty($bank_accounts)) {
+    $account_name = htmlspecialchars($bank_accounts[0]['account_name'] ?? COMPANY_NAME);
+    $html .= '
+        <div class="payment-header">MAKE ALL PAYMENTS IN FAVOUR OF: ' . $account_name . '</div>
+        <div class="bank-details">';
+
+    $column_width = floor(100 / count($bank_accounts));
+    foreach ($bank_accounts as $index => $account) {
+        $border_style = ($index < count($bank_accounts) - 1) ? 'border-right: 1px solid #0076BE;' : '';
+        $html .= '
+            <div class="bank-item" style="width: ' . $column_width . '%; ' . $border_style . '">
+                <div class="bank-name">' . htmlspecialchars($account['bank_name']) . '</div>
+                <div class="bank-account">Account No: ' . htmlspecialchars($account['account_number']) . '</div>
+                <div class="bank-account" style="font-size: 9px; margin-top: 3px;">' . htmlspecialchars($account['account_name']) . '</div>
+            </div>';
+    }
+
+    $html .= '
+        </div>';
+}
+
+$html .= '
         <div class="prepared-by">
             Invoice prepared by: ' . htmlspecialchars($invoice['salesperson']) . '
         </div>

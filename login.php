@@ -56,6 +56,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/1100erp/assets/css/responsive.css">
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -63,22 +67,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </style>
 </head>
 
-<body class="bg-gray-50 min-h-screen flex items-center justify-center">
+<body class="bg-gray-50 min-h-screen flex items-center justify-center px-4">
 
     <div class="w-full max-w-md">
-        <!-- Logo -->
+        <!-- Logo/Brand -->
         <div class="text-center mb-8">
-            <div class="flex justify-center items-center gap-2 mb-3">
-                <div class="flex items-center gap-1">
-                    <div class="w-3 h-3 bg-sky-500 rounded-full"></div>
-                    <div class="w-5 h-5 bg-sky-600 rounded-full border-2 border-secondary"></div>
-                    <div class="w-8 h-8 bg-sky-700 rounded-full"></div>
-                    <div class="w-10 h-10 border-4 border-secondary rounded-full"></div>
-                </div>
+            <div
+                class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl mb-4">
+                <span class="text-white font-bold text-3xl">11</span>
             </div>
-            <h1 class="text-3xl font-bold text-gray-900">Bluedots</h1>
-            <p class="text-xs tracking-[0.3em] uppercase font-bold text-gray-600">TECHNOLOGIES</p>
-            <p class="text-gray-600 mt-4">Quote Management System</p>
+            <h1
+                class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                1100-ERP
+            </h1>
+            <p class="text-gray-600">Enterprise Resource Planning</p>
         </div>
 
         <!-- Login Form -->
@@ -129,8 +131,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <div class="text-center mt-6 text-sm text-gray-600">
-            <p>©
-                <?php echo date('Y'); ?> Bluedots Technologies
+            <p>
+                ©
+                <?php echo date('Y'); ?> <?php echo defined('COMPANY_NAME') ? COMPANY_NAME : 'Your Company Name'; ?>
             </p>
         </div>
     </div>

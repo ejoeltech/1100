@@ -64,12 +64,12 @@ function getQuoteEmailTemplate($data)
         </div>
         
         <div class="footer">
-            <p><strong>Bluedots Technologies</strong></p>
-            <p>No. 9 Ugbor Village Road, Ugbor GRA, Benin City, Edo State</p>
-            <p>Phone: 07031635955 | Email: bluedotsng@gmail.com</p>
-            <p>www.bluedots.com.ng</p>
+            <p><strong>1100-ERP</strong></p>
+            <p>Your Company Address, City, State/Province, Country</p>
+            <p>Phone: +1234567890 | Email: contact@yourcompany.com</p>
+            <p>www.yourcompany.com</p>
             <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
-            <p style="font-size: 11px;">This is an automated email from Bluedots Technologies Quote Management System</p>
+            <p style="font-size: 11px;">This is an automated email from 1100-ERP System</p>
         </div>
     </div>
 </body>
@@ -134,8 +134,8 @@ function getInvoiceEmailTemplate($data)
         
         <div class="footer">
             <p><strong>Bluedots Technologies</strong></p>
-            <p>No. 9 Ugbor Village Road, Ugbor GRA, Benin City, Edo State</p>
-            <p>Phone: 07031635955 | Email: bluedotsng@gmail.com</p>
+            <p>Your Company Address, City, State/Province, Country</p>
+            <p>Phone: +1234567890 | Email: contact@yourcompany.com</p>
             <p>www.bluedots.com.ng</p>
             <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
             <p style="font-size: 11px;">This is an automated email from Bluedots Technologies Quote Management System</p>
@@ -201,8 +201,8 @@ function getReceiptEmailTemplate($data)
         
         <div class="footer">
             <p><strong>Bluedots Technologies</strong></p>
-            <p>No. 9 Ugbor Village Road, Ugbor GRA, Benin City, Edo State</p>
-            <p>Phone: 07031635955 | Email: bluedotsng@gmail.com</p>
+            <p>Your Company Address, City, State/Province, Country</p>
+            <p>Phone: +1234567890 | Email: contact@yourcompany.com</p>
             <p>www.bluedots.com.ng</p>
             <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
             <p style="font-size: 11px;">This is an automated email from Bluedots Technologies Quote Management System</p>

@@ -1,6 +1,6 @@
 <?php
-// Bluedots Technologies Quote Management System
-// Database Configuration
+// 1100-ERP System
+// Configuration File
 
 // Security includes (optional - Phase 3A)
 if (file_exists(__DIR__ . '/includes/security.php')) {
@@ -37,15 +37,16 @@ try {
     die("Database connection failed: " . $e->getMessage());
 }
 
-// Company information
-define('COMPANY_NAME', 'Bluedots Technologies');
-define('COMPANY_ADDRESS', 'No. 9 Ugbor Village Road, Ugbor GRA, Benin City, Edo State');
-define('COMPANY_PHONE', '07031635955');
-define('COMPANY_EMAIL', 'bluedotsng@gmail.com');
-define('COMPANY_WEBSITE', 'www.bluedots.com.ng');
+// Company information - REPLACE WITH YOUR COMPANY DETAILS
+define('COMPANY_NAME', 'Your Company Name');
+define('COMPANY_ADDRESS', 'Your Company Address, City, State/Province, Country');
+define('COMPANY_PHONE', '+1234567890');
+define('COMPANY_EMAIL', 'contact@yourcompany.com');
+define('COMPANY_WEBSITE', 'www.yourcompany.com');
 
-define('BANK_ACCESS', '0107309773');
-define('BANK_UBA', '1023821430');
+// Legacy bank account constants (deprecated - use bank_accounts table instead)
+define('BANK_ACCESS', '1234567890');
+define('BANK_UBA', '0987654321');
 
 define('DEFAULT_PAYMENT_TERMS', '80% Initial Deposit');
 define('VAT_RATE', 0.075); // 7.5%
@@ -137,6 +138,65 @@ function logAudit($action, $resourceType = null, $resourceId = null, $details = 
     } catch (Exception $e) {
         // Log error but don't break application
         error_log("Audit log error: " . $e->getMessage());
+    }
+}
+
+// ============================================
+// Bank Account Helper Functions
+// ============================================
+
+/**
+ * Get bank accounts for document display
+ */
+function getBankAccountsForDisplay()
+{
+    global $pdo;
+    try {
+        $stmt = $pdo->query("
+            SELECT bank_name, account_number, account_name 
+            FROM bank_accounts 
+            WHERE is_active = 1 AND show_on_documents = 1 
+            ORDER BY display_order ASC
+        ");
+        return $stmt->fetchAll();
+    } catch (Exception $e) {
+        // Table might not exist yet, return empty array
+        return [];
+    }
+}
+
+/**
+ * Get all active bank accounts
+ */
+function getAllBankAccounts()
+{
+    global $pdo;
+    try {
+        $stmt = $pdo->query("
+            SELECT * FROM bank_accounts 
+            WHERE is_active = 1 
+            ORDER BY display_order ASC
+        ");
+        return $stmt->fetchAll();
+    } catch (Exception $e) {
+        return [];
+    }
+}
+
+/**
+ * Get count of bank accounts selected for display
+ */
+function getSelectedBankAccountsCount()
+{
+    global $pdo;
+    try {
+        $stmt = $pdo->query("
+            SELECT COUNT(*) FROM bank_accounts 
+            WHERE is_active = 1 AND show_on_documents = 1
+        ");
+        return (int) $stmt->fetchColumn();
+    } catch (Exception $e) {
+        return 0;
     }
 }
 ?>

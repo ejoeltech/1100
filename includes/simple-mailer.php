@@ -43,7 +43,7 @@ function sendDocumentEmail($documentType, $documentId, $recipientEmail, $recipie
         $subject = getEmailSubject($documentType, $document);
         $body = getEmailBody($documentType, $document, $recipientName, $customMessage);
         $fromEmail = 'noreply@bluedots.com.ng';
-        $fromName = 'Bluedots Technologies';
+        $fromName = 'Your Company Name';
 
         // Send email with attachment
         $result = sendEmailWithAttachment(
@@ -92,7 +92,7 @@ function generateDocumentPDF($documentType, $documentId)
     $pdfPath = $tempDir . '/' . $filename;
 
     // Call appropriate PDF export
-    $exportUrl = $_SERVER['DOCUMENT_ROOT'] . '/bluedotserp/api/export-' . $documentType . '-pdf.php';
+    $exportUrl = $_SERVER['DOCUMENT_ROOT'] . '/1100erp/api/export-' . $documentType . '-pdf.php';
 
     // Create PDF using existing export
     $_GET['id'] = $documentId;
@@ -111,12 +111,12 @@ function generateDocumentPDF($documentType, $documentId)
 function getEmailSubject($documentType, $document)
 {
     $subjects = [
-        'quote' => "Quote #{number} from Bluedots Technologies",
-        'invoice' => "Invoice #{number} from Bluedots Technologies",
-        'receipt' => "Payment Receipt #{number} from Bluedots Technologies"
+        'quote' => "Quote #{number} from Your Company",
+        'invoice' => "Invoice #{number} from Your Company",
+        'receipt' => "Payment Receipt #{number} from Your Company"
     ];
 
-    $subject = $subjects[$documentType] ?? "Document from Bluedots Technologies";
+    $subject = $subjects[$documentType] ?? "Document from Your Company";
     return str_replace('{number}', $document['document_number'], $subject);
 }
 

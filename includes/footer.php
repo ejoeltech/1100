@@ -19,12 +19,58 @@
             </p>
             <p class="mt-4 text-xs text-gray-500">
                 ©
-                <?php echo date('Y'); ?> Bluedots Technologies. All rights reserved.
+                <?php echo date('Y'); ?> <?php echo COMPANY_NAME; ?>. All rights reserved.
             </p>
         </div>
     </div>
 </footer>
 
+<script>
+    // Mobile menu toggle functionality
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('mobileMenuOverlay');
+        const hamburger = document.querySelector('.hamburger');
+
+        menu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        if (hamburger) {
+            hamburger.classList.toggle('active');
+        }
+
+        // Prevent body scroll when menu is open
+        if (menu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Close mobile menu when clicking a link
+    document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenu) {
+            const links = mobileMenu.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', function () {
+                    toggleMobileMenu();
+                });
+            });
+        }
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            const menu = document.getElementById('mobileMenu');
+            if (menu && menu.classList.contains('active')) {
+                toggleMobileMenu();
+            }
+        }
+    });
+</script>
+
 </body>
+
 
 </html>
