@@ -1,0 +1,55 @@
+<?php
+session_start();
+require_once '../config.php';
+require_once '../includes/auth.php';
+require_once '../includes/permissions.php';
+require_once '../includes/audit.php';
+
+if (!isLoggedIn()) {
+    header('Location: ../login.php');
+    exit;
+}
+
+requirePermission('toggle_user_status');
+
+$user_id = $_GET['id'] ?? null;
+
+if (!$user_id) {
+    header('Location: ../pages/users/manage-users.php');
+    exit;
+}
+
+// Cannot toggle your own status
+if ($user_id == $_SESSION['user_id']) {
+    header('Location: ../pages/users/manage-users.php?error=Cannot change your own status');
+    exit;
+}
+
+try {
+    // Get current status
+    $stmt = $pdo->prepare("SELECT username, is_active FROM users WHERE id = ?");
+    $stmt->execute([$user_id]);
+    $user = $stmt->fetch();
+
+    if (!$user) {
+        throw new Exception('User not found');
+    }
+
+    // Toggle status
+    $new_status = $user['is_active'] ? 0 : 1;
+
+    $stmt = $pdo->prepare("UPDATE users SET is_active = ? WHERE id = ?");
+    $stmt->execute([$new_status, $user_id]);
+
+    // Log audit trail
+    logUserStatusToggle($user_id, $user['username'], $new_status);
+
+    header('Location: ../pages/users/manage-users.php?status_changed=1');
+    exit;
+
+} catch (Exception $e) {
+    $error = urlencode($e->getMessage());
+    header("Location: ../pages/users/manage-users.php?error=$error");
+    exit;
+}
+?>

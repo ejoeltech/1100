@@ -1,0 +1,22 @@
+/* Custom styles for Bluedots Quote Management System */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+    }
+    .no-print {
+        display: none !important;
+    }
+    #printableQuote {
+        box-shadow: none;
+        padding: 20mm;
+    }
+    header, footer {
+        display: none;
+    }
+}

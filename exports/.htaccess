@@ -1,0 +1,7 @@
+# Allow downloads
+<FilesMatch "\.(pdf)$">
+    Header set Content-Disposition attachment
+</FilesMatch>
+
+# Prevent directory listing
+Options -Indexes
