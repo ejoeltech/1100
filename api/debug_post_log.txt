@@ -1,0 +1,388 @@
+Array
+(
+    [company_name] => Bluedots Technologies
+    [company_address] => 26 Ugbor Village Road, Beside Matice Games and More
+GRA
+    [company_phone] => 07087986297
+    [company_email] => bluedotsng@gmail.com
+    [company_website] => www.yourcompany.com
+    [company_tax_id] => 
+    [email_method] => php_mail
+    [email_from_address] => noreply@bluedots.com.ng
+    [email_from_name] => Bluedots Technologies
+    [smtp_host] => smtp.gmail.com
+    [smtp_port] => 587
+    [smtp_username] => 
+    [smtp_password] => 
+    [smtp_encryption] => tls
+    [vat_rate] => 7.5
+    [quote_prefix] => QUOT-
+    [invoice_prefix] => INV-
+    [receipt_prefix] => REC-
+    [currency_symbol] => ₦
+    [tinymce_api_key] => vuqee7gm95lliih7fs9a7dbt38w25f2hqhmcaj3zzbwd5pkl
+    [date_format] => d/m/Y
+    [items_per_page] => 25
+    [show_dashboard_charts] => 1
+    [show_recent_activity] => 1
+    [pdf_quality] => high
+    [theme_color] => #0076be
+    [footer_text] => We appreciate your business! Thank you
+    [audit_retention_days] => 90
+    [log_user_actions] => 1
+    [log_document_create] => 1
+    [log_document_edit] => 1
+    [log_document_delete] => 1
+    [log_user_management] => 1
+    [log_settings_changes] => 1
+    [log_email_sent] => 1
+    [quote_terms] => test
+    [quote_warranty] => 
+)
+Array
+(
+    [company_name] => Bluedots Technologies
+    [company_address] => 26 Ugbor Village Road, Beside Matice Games and More
+GRA
+    [company_phone] => 07087986297
+    [company_email] => bluedotsng@gmail.com
+    [company_website] => www.yourcompany.com
+    [company_tax_id] => 
+    [email_method] => php_mail
+    [email_from_address] => noreply@bluedots.com.ng
+    [email_from_name] => Bluedots Technologies
+    [smtp_host] => smtp.gmail.com
+    [smtp_port] => 587
+    [smtp_username] => 
+    [smtp_password] => 
+    [smtp_encryption] => tls
+    [vat_rate] => 7.5
+    [quote_prefix] => QUOT-
+    [invoice_prefix] => INV-
+    [receipt_prefix] => REC-
+    [currency_symbol] => ₦
+    [tinymce_api_key] => vuqee7gm95lliih7fs9a7dbt38w25f2hqhmcaj3zzbwd5pkl
+    [date_format] => d/m/Y
+    [items_per_page] => 25
+    [show_dashboard_charts] => 1
+    [show_recent_activity] => 1
+    [pdf_quality] => high
+    [theme_color] => #0076be
+    [footer_text] => We appreciate your business! Thank you
+    [audit_retention_days] => 90
+    [log_user_actions] => 1
+    [log_document_create] => 1
+    [log_document_edit] => 1
+    [log_document_delete] => 1
+    [log_user_management] => 1
+    [log_settings_changes] => 1
+    [log_email_sent] => 1
+    [quote_terms] => testBLUEDOTS TERMS, CONDITIONS & WARRANTY
+1. PAYMENT TERMS
+•	All invoices are final and VAT exclusive.
+•	Sales: 100% payment upon purchase.
+•	Projects: 85% down payment before commencement, 15% balance due within 24 hours of project completion.
+•	Late Payments: Outstanding balances beyond 72 hours attract 5% interest per week until full settlement.
+•	Ownership of Products: Products remain the property of BLUEDOTS Technologies until full payment is received.
+2. DELIVERY TERMS
+•	Prices quoted are exclusive of delivery charges, unless otherwise stated.
+•	Delivery timelines are estimates only; BLUEDOTS shall not be liable for delays caused by third parties, supply shortages, or force majeure.
+3. TRANSPORT CHARGES
+•	Clients are responsible for arranging their own transport, including loading and offloading ex-warehouse. Execpt explicity stated by Bluedots technologies.
+•	If BLUEDOTS is consulted for delivery, our transport options will be provided at the client’s cost.
+•	BLUEDOTS shall not be liable for damages incurred during third-party transportation.
+
+    [quote_warranty] => 4. WARRANTY TERMS
+•	Inverter / Charge Controller / Online UPS: Standard manufacturer’s warranty against operational defects.
+•	Battery: Standard manufacturer’s warranty against operational defects.
+•	Solar Panel: 10-year manufacturer’s warranty against operational defects.
+•	Warranties are strictly limited to repair or replacement of defective items and do not cover consequential damages.
+5. WARRANTY CLAIMS PROCEDURE
+•	Products must be returned to BLUEDOTS’ office for testing. Valid claims will be repaired or replaced at no charge. 
+•	Products must be returned with all original accessories/items.
+•	All warranty claims that attract transportation and logistics charges are payable by the client.
+•	Warranty is valid only if products are installed and used according to BLUEDOTS’ or manufacturer’s specifications.
+GENERAL WARRANTY EXCLUSIONS
+Warranty is void if damage arises from:
+1.	Poor electrical wiring or load distribution at client’s site.
+2.	Physical damage due to negligent handling (operation, transit, or otherwise).
+3.	Improper installation/application (manuals and datasheets must be followed).
+4.	Unauthorized repairs, modifications, or tampering.
+5.	Acts of God, force majeure, fire, flood, lightning, or vandalism.
+6.	Cost of logistics/transportation to the manufacturer (covered by client).
+SPECIFIC WARRANTY EXCLUSIONS
+BATTERIES
+Warranty is void if:
+1.	Any of the general exclusions apply.
+2.	Batteries are mixed with old or other brands in one installation.
+3.	Batteries of different capacities, composition or brand are combined in one installation.
+4.	AGM and GEL batteries are combined in one installation.
+5.	Batteries are short-circuited or physically damaged.
+For valid claims, the inverter used with the batteries must be brought to BLUEDOTS. If this is not possible, client must arrange logistics for BLUEDOTS’ technical inspection at site.
+INVERTERS / UPS / CHARGE CONTROLLERS
+Warranty is void if:
+1.	Any of the general exclusions apply.
+2.	Damage results from transient grid surges/spikes.
+3.	Damage results from improper load application.
+4.	Units are kept in unsuitable environments (dust, rain, humidity, direct sunlight).
+5.	Internal seal is broken or unit has been tampered with.
+SOLAR PANELS
+•	Warranty is void if any general exclusions apply.
+•	Panels must be inspected for defects before sale. Once supplied, warranty claims are void.
+LIMITATION OF LIABILITY
+1.	BLUEDOTS shall not be liable for indirect, incidental, or consequential damages, including but not limited to: business loss, downtime, loss of profit, or data loss.
+2.	BLUEDOTS’ total liability under any claim is strictly limited to the value of the defective product supplied.
+INSTALLATION & MAINTENANCE
+•	Installation must be done by BLUEDOTS-approved technicians or certified professionals. Otherwise, warranties are void.
+•	Periodic maintenance is the client’s responsibility unless otherwise contracted.
+QUOTATIONS & VALIDITY
+•	All quotations are valid for 14 days unless otherwise stated.
+•	BLUEDOTS reserves the right to revise prices due to currency fluctuations, supplier adjustments, or other market conditions.
+INTELLECTUAL PROPERTY
+•	All design proposals, technical drawings, manuals, and reports provided by BLUEDOTS remain intellectual property of BLUEDOTS and may not be shared, copied, or reproduced without written consent.
+
+
+)
+Array
+(
+    [company_name] => Bluedots Technologies
+    [company_address] => 26 Ugbor Village Road, Beside Matice Games and More
+GRA
+    [company_phone] => 07087986297
+    [company_email] => bluedotsng@gmail.com
+    [company_website] => www.yourcompany.com
+    [company_tax_id] => 
+    [email_method] => php_mail
+    [email_from_address] => noreply@bluedots.com.ng
+    [email_from_name] => Bluedots Technologies
+    [smtp_host] => smtp.gmail.com
+    [smtp_port] => 587
+    [smtp_username] => 
+    [smtp_password] => 
+    [smtp_encryption] => tls
+    [vat_rate] => 7.5
+    [quote_prefix] => QUOT-
+    [invoice_prefix] => INV-
+    [receipt_prefix] => REC-
+    [currency_symbol] => ₦
+    [tinymce_api_key] => vuqee7gm95lliih7fs9a7dbt38w25f2hqhmcaj3zzbwd5pkl
+    [date_format] => d/m/Y
+    [items_per_page] => 25
+    [show_dashboard_charts] => 1
+    [show_recent_activity] => 1
+    [pdf_quality] => high
+    [theme_color] => #0076be
+    [footer_text] => We appreciate your business! Thank you
+    [audit_retention_days] => 90
+    [log_user_actions] => 1
+    [log_document_create] => 1
+    [log_document_edit] => 1
+    [log_document_delete] => 1
+    [log_user_management] => 1
+    [log_settings_changes] => 1
+    [log_email_sent] => 1
+    [quote_terms] => <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUEDOTS Terms & Conditions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2><strong>BLUEDOTS TERMS, CONDITIONS &amp; WARRANTY</strong></h2>
+
+    <h3><strong>1. PAYMENT TERMS</strong></h3>
+    <ul>
+        <li>All invoices are <strong>final</strong> and <strong>VAT exclusive</strong>.</li>
+        <li><strong>Sales:</strong> 100% payment upon purchase.</li>
+        <li><strong>Projects:</strong> 85% down payment before commencement, 15% balance due within <strong>24 hours of project completion</strong>.</li>
+        <li><strong>Late Payments:</strong> Outstanding balances beyond 72 hours attract <strong>5% interest per week</strong> until full settlement.</li>
+        <li><strong>Ownership of Products:</strong> Products remain the property of <strong>BLUEDOTS Technologies</strong> until full payment is received.</li>
+    </ul>
+
+    <h3><strong>2. DELIVERY TERMS</strong></h3>
+    <ul>
+        <li>Prices quoted are <strong>exclusive of delivery charges</strong>, unless otherwise stated.</li>
+        <li>Delivery timelines are <strong>estimates</strong> only; BLUEDOTS shall not be liable for delays caused by third parties, supply shortages, or force majeure.</li>
+    </ul>
+
+    <h3><strong>3. TRANSPORT CHARGES</strong></h3>
+    <ul>
+        <li>Clients are responsible for arranging their own transport, including loading and offloading ex-warehouse. Execpt explicity stated by Bluedots technologies.</li>
+        <li>If BLUEDOTS is consulted for delivery, our transport options will be provided at the client's cost.</li>
+        <li>BLUEDOTS shall not be liable for damages incurred during <strong>third-party transportation</strong>.</li>
+    </ul>
+
+    <h3><strong>4. WARRANTY TERMS</strong></h3>
+    <ul>
+        <li><strong>Inverter / Charge Controller / Online UPS:</strong> Standard manufacturer's warranty against operational defects.</li>
+        <li><strong>Battery:</strong> Standard manufacturer's warranty against operational defects.</li>
+        <li><strong>Solar Panel:</strong> 10-year manufacturer's warranty against operational defects.</li>
+        <li>Warranties are strictly limited to <strong>repair or replacement</strong> of defective items and do not cover consequential damages.</li>
+    </ul>
+
+    <h3><strong>5. WARRANTY CLAIMS PROCEDURE</strong></h3>
+    <ul>
+        <li>Products must be returned to BLUEDOTS' office for testing. Valid claims will be repaired or replaced at no charge.</li>
+        <li>Products must be returned with all original accessories/items.</li>
+        <li>All warranty claims that <strong>attract transportation and logistics charges</strong> are payable by the client.</li>
+        <li>Warranty is valid only if products are installed and used according to BLUEDOTS' or manufacturer's specifications.</li>
+    </ul>
+
+    <h3><strong>GENERAL WARRANTY EXCLUSIONS</strong></h3>
+    <p>Warranty is void if damage arises from:</p>
+    <ol>
+        <li>Poor electrical wiring or load distribution at client's site.</li>
+        <li>Physical damage due to negligent handling (operation, transit, or otherwise).</li>
+        <li>Improper installation/application (manuals and datasheets must be followed).</li>
+        <li>Unauthorized repairs, modifications, or tampering.</li>
+        <li>Acts of God, force majeure, fire, flood, lightning, or vandalism.</li>
+        <li>Cost of logistics/transportation to the manufacturer (covered by client).</li>
+    </ol>
+
+    <h3><strong>SPECIFIC WARRANTY EXCLUSIONS</strong></h3>
+
+    <h4><strong>BATTERIES</strong></h4>
+    <p>Warranty is void if:</p>
+    <ol>
+        <li>Any of the <strong>general exclusions</strong> apply.</li>
+        <li>Batteries are mixed with old or other brands in one installation.</li>
+        <li>Batteries of different capacities, composition or brand are combined in one installation.</li>
+        <li>AGM and GEL batteries are combined in one installation.</li>
+        <li>Batteries are short-circuited or physically damaged.</li>
+    </ol>
+    <p>For valid claims, the <strong>inverter used with the batteries must be brought to BLUEDOTS</strong>. If this is not possible, client must arrange logistics for BLUEDOTS' technical inspection at site.</p>
+
+    <h4><strong>INVERTERS / UPS / CHARGE CONTROLLERS</strong></h4>
+    <p>Warranty is void if:</p>
+    <ol>
+        <li>Any of the <strong>general exclusions</strong> apply.</li>
+        <li>Damage results from transient grid surges/spikes.</li>
+        <li>Damage results from improper load application.</li>
+        <li>Units are kept in unsuitable environments (dust, rain, humidity, direct sunlight).</li>
+        <li>Internal seal is broken or unit has been tampered with.</li>
+    </ol>
+
+    <h4><strong>SOLAR PANELS</strong></h4>
+    <ul>
+        <li>Warranty is void if any <strong>general exclusions</strong> apply.</li>
+        <li>Panels must be inspected for defects <strong>before sale</strong>. Once supplied, warranty claims are void.</li>
+    </ul>
+
+    <h3><strong>LIMITATION OF LIABILITY</strong></h3>
+    <ol>
+        <li>BLUEDOTS shall not be liable for <strong>indirect, incidental, or consequential damages</strong>, including but not limited to: business loss, downtime, loss of profit, or data loss.</li>
+        <li>BLUEDOTS' total liability under any claim is strictly limited to the <strong>value of the defective product supplied</strong>.</li>
+    </ol>
+
+    <h3><strong>INSTALLATION &amp; MAINTENANCE</strong></h3>
+    <ul>
+        <li>Installation must be done by <strong>BLUEDOTS-approved technicians</strong> or certified professionals. Otherwise, warranties are void.</li>
+        <li>Periodic maintenance is the client's responsibility unless otherwise contracted.</li>
+    </ul>
+
+    <h3><strong>QUOTATIONS &amp; VALIDITY</strong></h3>
+    <ul>
+        <li>All quotations are valid for <strong>14 days</strong> unless otherwise stated.</li>
+        <li>BLUEDOTS reserves the right to revise prices due to currency fluctuations, supplier adjustments, or other market conditions.</li>
+    </ul>
+
+    <h3><strong>INTELLECTUAL PROPERTY</strong></h3>
+    <ul>
+        <li>All design proposals, technical drawings, manuals, and reports provided by BLUEDOTS remain <strong>intellectual property of BLUEDOTS</strong> and may not be shared, copied, or reproduced without written consent.</li>
+    </ul>
+</body>
+</html>
+    [quote_warranty] => 
+)
+Array
+(
+    [company_name] => 
+    [company_address] => 
+    [company_phone] => 
+    [company_email] => 
+    [company_website] => 
+    [company_tax_id] => 
+    [email_method] => php_mail
+    [email_from_address] => noreply@bluedots.com.ng
+    [email_from_name] => Bluedots Technologies
+    [smtp_host] => smtp.gmail.com
+    [smtp_port] => 587
+    [smtp_username] => 
+    [smtp_password] => Important@1
+    [smtp_encryption] => tls
+    [vat_rate] => 7.5
+    [quote_prefix] => QUOT-
+    [invoice_prefix] => INV-
+    [receipt_prefix] => REC-
+    [currency_symbol] => ₦
+    [tinymce_api_key] => vuqee7gm95lliih7fs9a7dbt38w25f2hqhmcaj3zzbwd5pkl
+    [date_format] => d/m/Y
+    [items_per_page] => 25
+    [show_dashboard_charts] => 1
+    [show_recent_activity] => 1
+    [pdf_quality] => high
+    [theme_color] => #0076be
+    [footer_text] => We appreciate your business! Thank you
+    [audit_retention_days] => 90
+    [log_user_actions] => 1
+    [log_document_create] => 1
+    [log_document_edit] => 1
+    [log_document_delete] => 1
+    [log_user_management] => 1
+    [log_settings_changes] => 1
+    [log_email_sent] => 1
+    [quote_terms] => 
+    [quote_warranty] => 
+)
+Array
+(
+    [company_name] => Bluedots Technologies
+    [company_address] => 26 Ugbor Village Road, 
+Beside Matice Games and More
+Ugbor, GRA
+    [company_phone] => 07087986297
+    [company_email] => bluedotsng@gmail.com
+    [company_website] => www.bluedots.com.ng
+    [company_tax_id] => 
+    [email_method] => php_mail
+    [email_from_address] => noreply@bluedots.com.ng
+    [email_from_name] => Bluedots Technologies
+    [smtp_host] => smtp.gmail.com
+    [smtp_port] => 587
+    [smtp_username] => 
+    [smtp_password] => 
+    [smtp_encryption] => tls
+    [vat_rate] => 7.5
+    [quote_prefix] => QUOT-
+    [invoice_prefix] => INV-
+    [receipt_prefix] => REC-
+    [currency_symbol] => ₦
+    [tinymce_api_key] => no-api-key
+    [date_format] => d/m/Y
+    [items_per_page] => 25
+    [show_dashboard_charts] => 1
+    [show_recent_activity] => 1
+    [pdf_quality] => high
+    [theme_color] => #0076be
+    [footer_text] => We appreciate your business! Thank you
+    [audit_retention_days] => 90
+    [log_user_actions] => 1
+    [log_document_create] => 1
+    [log_document_edit] => 1
+    [log_document_delete] => 1
+    [log_user_management] => 1
+    [log_settings_changes] => 1
+    [log_email_sent] => 1
+    [quote_terms] => 
+    [quote_warranty] => 
+)
